@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "212159785577",
+    "project_id": "sendnotifications-bc90a",
+    "storage_bucket": "sendnotifications-bc90a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212159785577:android:5527501adbf491416c10f8",
+        "android_client_info": {
+          "package_name": "com.example.sendnotifications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212159785577-993sfnh4tqe3bqkmpsbonkjc0er92qv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe2cnaWPD0amgkgyE3hzZBCk7UMnpDeQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212159785577-993sfnh4tqe3bqkmpsbonkjc0er92qv1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
