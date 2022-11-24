@@ -40,6 +40,22 @@ class MainActivity : AppCompatActivity() {
 
             })
         }
+
+        binding.fab.setOnClickListener { _ ->
+            FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+
+                if(!task.isSuccessful) {
+                    return@OnCompleteListener
+                }
+
+                val token = task.result
+                Toast.makeText(baseContext,token, Toast.LENGTH_LONG).show()
+                var clipboardManager = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+                val clipData = ClipData.newPlainText("text",token)
+                clipboardManager.setPrimaryClip(clipData)
+
+            })
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
