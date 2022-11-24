@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             })
         }
 
-        binding.fab.setOnClickListener { _ ->
+        findViewById<Button>(R.id.fab).setOnClickListener { _ ->
             FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
 
                 if(!task.isSuccessful) {
