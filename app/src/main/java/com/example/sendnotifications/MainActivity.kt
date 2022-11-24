@@ -4,16 +4,17 @@ import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.firebase.FirebaseApp
 import com.google.firebase.messaging.FirebaseMessaging
+
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -41,7 +42,12 @@ class MainActivity : AppCompatActivity() {
             })
         }
 
-        findViewById<Button>(R.id.fab).setOnClickListener { _ ->
+        findViewById<Button>(R.id.button2).setOnClickListener { _ ->
+            val intent = Intent(this, WebView::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { _ ->
             FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
 
                 if(!task.isSuccessful) {
@@ -60,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(androidx.core.R.menu.example_menu, menu)
+       // menuInflater.inflate(androidx.core.R.menu.example_menu, menu)
         return true
     }
 

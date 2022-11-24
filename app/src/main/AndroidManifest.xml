@@ -12,14 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SendNotifications"
         tools:targetApi="31">
+        <activity
+            android:name=".WebView"
+            android:exported="false"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.SendNotifications.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
 
         <service
             android:name=".MyFirebaseMessagingService"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-
         </service>
 
         <activity
